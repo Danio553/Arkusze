@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="PL">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styl3.css">
+</head>
+<body>
+    <div id="banner-lewy">
+        <h1>Stacja Paliw</h1>
+    </div>
+        <div id="banner-prawy">
+
+            <a href="stacja.html">
+                <img src="home.png" alt="">
+            </a>
+
+            <a href="obliczenia.html">
+                <img src="znak.png" alt="">
+            </a>
+    </div>
+    <main>
+        <h3>Godziny otwarcia paliw</h3>
+        <label for="rodzajPaliwa">RodzajPaliwa (1-benzyna, 2-olej napędowy):</label><br>
+        <input type="number" name="" id="RodzajPaliwa"><br>
+        <label for="litry">Ile litrów</label><br>
+        <input type="number" name="" id="litry"><br>
+        <button onclick="oblicz()">Oblicz</button>
+        <p id="wynik"></p>
+    </main>
+    <div id="lewy">
+            <a href="kwerendy.txt">Pobierz kwerendy</a>
+    </div>
+    <div id="prawy">
+        <img src="samochod.png" alt="samochod">
+    </div>
+    <footer>
+        <p>Stronę Opracował: 02312708894</p>
+    </footer>
+    <script>
+        function oblicz() {
+            var rodzaj = document.getElementById('RodzajPaliwa').value;
+            rodzaj = parseInt(rodzaj);
+            var ilosc = document.getElementById('litry').value;
+            ilosc = parseInt(ilosc);
+            var koszt = 0;
+            switch (rodzaj) {
+                case 1:
+                    koszt = ilosc * 4;
+                    break;
+                case 2:
+                    koszt = ilosc * 3,5;
+                    break;    
+                default:
+                    koszt = 0;
+                    break;    
+            }
+            document.getElementById('wynik').innerHTML =
+                         "koszt paliwa: " + koszt + "zł";
+        }
+
+    </script>
+</body>
+</html>
