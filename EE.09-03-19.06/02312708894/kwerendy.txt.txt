@@ -1,4 +1,5 @@
-1. SELECT informacja, wart_min, wart_max FROM `bmi`
-2. INSERT INTO `wynik` (`id`, `bmi_id`, `data_pomiaru`, `wynik`) VALUES (NULL, '3', '2020-05-10', '27')
-3. SELECT wynik.wynik, wynik.data_pomiaru, bmi.informacja FROM wynik JOIN bmi ON wynik.bmi_id = bmi.id
-4. SELECT wart_min, wart_max FROM `bmi` WHERE informacja = "nadwaga"
+1. INSERT INTO `zawody_wedkarskie` (`id`, `Karty_wedkarskie_id`, `Lowisko_id`, `data_zawodow`, `sedzia`) VALUES (NULL, '2', '4', '2018-09-28', 'Tomasz Kowal');
+2. SELECT data_zawodow FROM `zawody_wedkarskie` WHERE sedzia = "Jan Kowalewski"
+3. SELECT `imie`, `nazwisko` FROM `karty_wedkarskie` LEFT JOIN zawody_wedkarskie ON karty_wedkarskie.id = zawody_wedkarskie.Karty_wedkarskie_id WHERE zawody_wedkarskie.id = 3
+4. UPDATE `karty_wedkarskie` SET `punkty` = '10' WHERE `karty_wedkarskie`.`id` = 2;
+
