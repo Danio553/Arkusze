@@ -1,0 +1,50 @@
+#banerlewy {
+    text-align: center;
+    width: 75%;
+    height: 150px;
+    font-size: 200%;
+    float: left;
+}
+#banerprawy {
+    width: 25%;
+    height: 150px;
+    float: left;
+}
+main {
+    background-color: rgb(128, 0, 0);
+    padding: 50px;
+    text-transform: capitalize;
+    
+}
+#stopka1 , #stopka3 {
+    width: 20%;
+    padding-top: 90px;
+    float: left;
+}
+#stopka2 {
+    text-align: center;
+    width: 60%;
+    float: left;
+}
+body {
+    font-family: Arial;
+    background-color: rgb(244, 164, 96);
+    color: #FFFFFF;
+}
+p {
+    font-size: 150%;
+    border: rgb(169, 169, 169) 2px;
+    border-style: dotted; 
+}
+p:hover {
+    background-color: rgb(169, 169, 169);
+}
+table, tr {
+    width: 100%;
+    border-collapse: collapse
+}
+td {
+    border: rgb(192, 192, 192) 1px;
+    border-style: solid;
+    padding: 5px;
+}
